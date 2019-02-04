@@ -1,0 +1,12 @@
+{% extends 'layout.html' %} 
+
+{% block body %}
+    <div class='container' style="width:90%; height:100%; background-color:#cfdce6; margin: auto; margin-top: 5em; margin-bottom: 2em;">
+        <h3>ARTICLES</h3>
+        <ul class='list-group'>
+        {% for article in articles %}
+            <li class='list-group-item'><a href='/article/{{article.id}}'>{{article.title}}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

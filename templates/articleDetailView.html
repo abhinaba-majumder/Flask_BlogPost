@@ -1,0 +1,16 @@
+{% extends 'layout.html' %} 
+
+{% block body %}
+    <div class='container' style="width:90%; height:100%; background-color:#cfdce6; margin: auto; margin-top: 5em; margin-bottom: 2em;">
+        <h3>ARTICLES</h3>
+        <ul class='list-group'>
+        {% for article in articles %}
+            {% ifequal article.id id %}
+                <p class='lead'>{{article.id}}<p>
+                <p class='lead'>{{article.title}}<p>
+                <p class='lead'>{{article.body}}<p>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
